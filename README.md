@@ -1,70 +1,85 @@
-# Getting Started with Create React App
+# usePopcorn
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**usePopcorn** is a user-friendly React application designed to help you search for movies, view detailed information, and manage a personal watchlist with seamless local storage support. Whether you're discovering new films or keeping track of your favorites, usePopcorn makes the process effortless and enjoyable.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Movie Search**: Easily search for movies using the OMDB API.
+- **Detailed Movie Information**: View comprehensive details about each movie, including plot, actors, director, and ratings.
+- **Watchlist Management**: Add movies to your personal watchlist and track your watched films.
+- **Local Storage Persistence**: Your watchlist is saved in the browser's local storage, ensuring your data remains intact between sessions.
+- **Responsive Design**: Optimized for a seamless experience across all devices.
+- **Interactive UI**: Intuitive interface with dynamic components for an engaging user experience.
 
-### `npm start`
+## Components
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The project is organized into the following React components:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **App**: The main component that manages state and renders the application layout.
+- **NavBar**: Displays the logo, search bar, and the number of search results.
+- **Search**: Input field for searching movies.
+- **MovieList**: Displays a list of movies based on the search query.
+- **Movie**: Represents an individual movie item with its poster, title, and release year.
+- **MovieDetails**: Shows detailed information about a selected movie and allows adding it to the watchlist.
+- **WatchedSummary**: Provides a summary of the watched movies, including average ratings and total runtime.
+- **WatchedMoviesList**: Displays the list of watched movies with options to delete them.
+- **Loader**: Indicates loading states during data fetching.
+- **ErrorMessage**: Displays error messages when something goes wrong.
+- **Box**: A reusable component that can toggle its visibility.
+- **StarRating**: Allows users to rate movies with a star-based system.
 
-### `npm test`
+## How It Works
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **Search for Movies**:
+   - Enter a movie title in the search bar.
+   - The app fetches and displays a list of movies matching the query from the OMDB API.
 
-### `npm run build`
+2. **View Movie Details**:
+   - Click on a movie from the search results to view detailed information.
+   - The details include plot, runtime, genre, director, actors, and IMDb rating.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. **Manage Watchlist**:
+   - Rate the movie using the star rating system and add it to your watchlist.
+   - View your watched movies in the watchlist, which displays average IMDb ratings, user ratings, and total runtime.
+   - Remove movies from the watchlist as needed.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. **Local Storage**:
+   - All watched movies are saved in the browser's local storage, ensuring your data persists across sessions.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Technologies Used
 
-### `npm run eject`
+- **React**: For building the user interface and managing state.
+- **JavaScript (ES6+)**: Core language for building the application logic.
+- **CSS**: For styling components and ensuring responsive design.
+- **OMDB API**: For fetching movie data.
+- **Custom Hooks**: `useMovies`, `useLocalStorageState`, and `useKey` for managing specific functionalities.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Installation
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To run the project locally, follow these steps:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. **Clone the repository**:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   ```bash
+   git clone https://github.com/Glogoroski/UsePopcorn.git
+   ```
 
-## Learn More
+2. **Navigate to the project directory**:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   ```bash
+   cd usePopcorn
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. **Install the dependencies**:
 
-### Code Splitting
+   ```bash
+   npm install
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+4. **Start the application**:
 
-### Analyzing the Bundle Size
+   ```bash
+   npm start
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+   The app will be available at `http://localhost:3000`.
